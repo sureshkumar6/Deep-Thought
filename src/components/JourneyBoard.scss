@@ -1,0 +1,98 @@
+.sidebar-jb-wrapper {
+    .sidebar {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .menu {
+        background-color: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -4px 4px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 10;
+        left: -200px;
+        transition: 850ms;
+        border-radius: 10px;
+
+        .sidebar-content-wrapper {
+            display: grid;
+            grid-template-rows: 50px auto;
+
+            .sidebar-content-header {
+                background-color: black;
+                color: white;
+                border-top-right-radius: 10px;
+                display: grid;
+                grid-template-columns: auto 50px;
+                align-items: center;
+
+                p {
+                    margin: 0;
+                    padding-left: 20px;
+                }
+
+                .menu-toggle {
+                    font-size: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+
+            }
+
+            .sidebar-content-body {
+                font-size: 12px;
+                position: relative;
+
+                .menu-items {
+                    padding: 10px 50px;
+
+                    height: 400px;
+
+                    .sidebar-bold {
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                    }
+                
+                    .sidebar-text {
+                        font-size: 12px;
+                        padding-left: 10px;
+                    }
+                }
+
+                .hidden-sidebar-content {
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                    border: 1px solid #0029ff;
+                    border-radius: 10px;
+                    height: 68px;
+                    width: 68px;
+                    color: #0029ff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .menu.active {
+        left: 0;
+        transition: 350ms;
+    }
+
+    .hide-sidebar-content {
+        opacity: 0;
+        transition: 350ms;
+    }
+
+    .display-sidebar-content {
+        opacity: 1;
+        transition: 350ms;
+    }
+}

@@ -1,0 +1,151 @@
+.App {
+  .App-header-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    align-items: center;
+    background-color: #f0f0f0;
+    min-width: 600px;
+    box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.30);
+    -webkit-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.30);
+    -moz-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.30);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .App-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 50px;
+      padding: 20px;
+
+      .header-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+  
+        button:not(:last-child) {
+          outline: 0;
+          border: 0;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #3683f0;
+          color: white;
+          cursor: pointer;
+        }
+  
+        button:last-child {
+          outline: 0;
+          border: 0;
+          width: 30px;
+          height: 30px;
+          font-size: 20px;
+          font-weight: 200;
+          border-radius: 50%;
+          background-color: transparent;
+          color: #3683f0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .body-content-wrapper {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+
+    .body-content {
+      padding-left: 50px;
+      padding-right: 50px;
+      justify-self: center;
+      display: flex;
+      flex-direction: column;
+
+      .sidebar-jb {
+        position: fixed;
+        left: 0;
+        top: 80px;
+      }
+
+      .title-text {
+        font-size: 28px;
+        color: #0029ff;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+        p {
+          font-weight: 700;
+        }
+
+        button {
+          outline: 0;
+          border: 0;
+          height: 36px;
+          width: 121px;
+          border-radius: 10px;
+          color: white;
+          background-color: #0029ff;
+          cursor: pointer;
+        }
+      }
+
+      .generic-description-styled {
+        margin-top: 20px;
+        border-radius: 5px;
+        color: black;
+        background-color: #e9ecef;
+        padding: 10px 30px;
+
+        .generic-description-styled-title {
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        .generic-description-styled-desc {
+          font-size: 14px;
+        }
+      }
+
+      .grid-container {
+        margin-top: 80px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 480px);
+        gap: 50px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.info-buttons{
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.buttons-style{
+  display:fixed;
+  background: #0029ff;
+  color: white;
+  height:60px;
+  width: 60px;
+  border-radius:50%;
+  border: none;
+  margin: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  transition: background .2s,opacity .2s,transform .2s;
+  cursor: pointer;
+  font-size: 25px;
+}
